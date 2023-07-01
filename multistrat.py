@@ -106,9 +106,9 @@ def placeOrderStrat(app: TradingApp, symbol: str, expiry: str, strat: str, strik
         case "put spread":
             CP = ["P", "P"]
             match right:
-                case "bear":
-                    rights = ["BUY", "SELL"]
                 case "bull":
+                    rights = ["BUY", "SELL"]
+                case "bear":
                     rights = ["SELL", "BUY"]
                 case _:
                     temp = 1
